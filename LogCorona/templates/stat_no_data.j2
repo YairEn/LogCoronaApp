@@ -1,0 +1,15 @@
+{% extends "base.j2" %}
+
+{% block links %}
+    <li><a href="log_corona_main">Add Logs</a></li>
+    <li><a href="logout">Logout</a></li>
+{%endblock%}
+
+{% block content%}
+    <div>
+        <pre class="no_logs_stat">
+            You don't have log yet,
+            You can add new logs by click on the <a class="add_logs_stat" href="log_corona_main">'Add logs'</a> link
+        </pre>
+    </div>
+{%endblock%}

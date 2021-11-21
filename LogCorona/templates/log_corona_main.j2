@@ -1,0 +1,57 @@
+{% extends "base.j2" %}
+
+
+{% block links %}
+    <li><a href="stat">Your Logs</a></li>
+    <li><a href="logout">Logout</a></li>
+{%endblock%}
+
+{% block content%}
+
+    <div>
+        <div class="msg_log_corona">{{msg}}</div>
+        <form class="log_corona_main" action="#" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Location</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="input_table" type="text" name="first_name"
+                    title="First name by letters"
+                    required="required"
+                    pattern="[א-תA-Za-z ]{1,50}"></td>
+                    <td><input class="input_table" type="text" name="last_name"
+                    title="Last name by letters"
+                    pattern="[א-תA-Za-z ]{1,50}"></td>
+                    <td><input class="input_table" type="text" name="location"
+                    title="Location name by letters and numbers"
+                    pattern="[א-תA-Za-z0-9\s]+{1,50}"></td>
+                    <td><input class="input_table" type="text" name="comment"
+                    title="Comment by letters and numbers"></td>
+                </tr>
+                {% for log in log_data %}
+                <tr>
+                    <td><input class="input_table"
+                    type="text" name={{log.first_name}} placeholder="{{log.first_name}}" disabled></td>
+                    <td><input class="input_table"
+                    type="text" name={{log.last_name}} placeholder="{{log.last_name}}" disabled></td>
+                    <td><input class="input_table"
+                    type="text" name={{log.location_name}} placeholder="{{log.location_name}}" disabled></td>
+                     <td><input class="input_table"
+                    type="text" name={{log.comment}} placeholder="{{log.comment}}" disabled></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="table_btn">
+            <input class="btn" type="submit" value="Add">
+        </div>
+    </form>
+    </div>
+{%endblock%}

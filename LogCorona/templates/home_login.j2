@@ -1,0 +1,22 @@
+{% extends "base.j2" %}
+
+{% block title_link %}
+    <a href="/">Log Corona</a>
+{%endblock%}
+
+{% block links %}
+    <li><a href="log_corona_main">Add Logs</a></li>
+    <li><a href="stat">Your Logs</a></li>
+    <li><a href="logout">Logout</a></li>
+{%endblock%}
+
+{% block content%}
+<div>
+        <pre class="welcome_corona">
+            Hey {% block name%}{{user_name}}{% endblock%},
+            Who you met today?
+        </pre>
+
+      
+</div>
+{%endblock%}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Amaranth&family=Baloo+Chettan+2&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <title>Log Corona</title>
+</head>
+
+<body>
+<header class="header">
+<img class="corona_img" src="../static/images/tenor.gif">
+    <div class="title">
+        <a href="/">Log Corona</a>
+        <!-- <span class="mini_title">/ {% block mini_title %}{% endblock %} </span> -->
+    </div>
+    <nav>
+        <ul class="links">
+            {% block links%}
+            {% endblock %}
+        </ul>
+    </nav>
+</header>
+<main>
+    {% block content%}
+
+    {% endblock %}
+    
+</main>
+</body>
+</html>

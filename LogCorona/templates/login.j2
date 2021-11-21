@@ -1,0 +1,20 @@
+{% extends "base.j2" %}
+
+{% block links %}
+    <li><a href="login">Login</a></li>
+    <li><a href="register">SignUp</a></li>
+{%endblock%}
+
+{% block content%}
+
+<div class="login_main"> 
+        <form class="login" action="/login" method="POST">
+            <label class="registerMsg">{{msg}}</label>
+            <h1>Login</h1>
+            <input class="input" type="text" name="loginUsername" placeholder="Username" required="required" pattern="[א-תA-Za-z0-9]{1,50}"/>
+            <input class="input" type="password" name="loginPassword" placeholder="Password" required="required"/>
+            <input type="submit" name="loginSubmit" value="Login"/>
+        </form>
+</div>
+
+{%endblock%}
